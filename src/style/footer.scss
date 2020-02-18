@@ -1,0 +1,18 @@
+
+.footer{
+    position: relative;
+    font-size: 1em;
+    text-align: center;
+    margin: 0 0 40px 0;
+    p{
+        margin: 5px 0;
+    }
+    .menu{
+        position: static;
+        margin: 20px 0 0 0;
+        a{
+            font-weight: 400;
+            font-size: 1.2em;
+        }
+    }
+}

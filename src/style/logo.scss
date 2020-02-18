@@ -1,0 +1,39 @@
+
+.logo{
+    background-image: url('/reactProject1_logo.png');
+    display: block;
+    background-position: 50%;
+    position: absolute;
+    span{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 800;
+        color: $title_colour;
+    }
+    &.headerLogo{
+        width: 70px;
+        height: 70px;
+        background-size: 70px;
+        top: 30%;
+        left: 20px;
+        span{
+            left: calc( 100% + 10px );
+            font-size: 2em;
+            width: 250px;
+        }
+    }
+    &.footerLogo{
+        width: 40px;
+        height: 40px;
+        background-size: 40px;
+        left: calc( 50% - 110px );
+        margin: 20px 0 40px 0;
+        span{
+            left: calc( 100% + 4px );
+            font-size: 1.5em;
+            width: 180px;
+        }
+    }
+}

@@ -6,7 +6,7 @@
 // -----------------------------------------------------------------------------
 
 // -- Components ---------------------------------------------------------------
-    import { Header } from './components/Header';
+    import Header from './components/Header';
     import Content from './components/Content';
     import Footer from './components/Footer';
 // -----------------------------------------------------------------------------
@@ -14,13 +14,19 @@
 class App extends React.Component{
     constructor(props){
         super(props);
+        this.state = { currentPage: 'home' };
+        this.menuHandler = this.menuHandler.bind(this);
+    }
+    menuHandler(target){
+        this.setState({ currentPage:target });
+        window.scrollTo(0,0);
     }
     render(){
         return(
             <>
-                <Header />
-                <Content />
-                <Footer />
+                <Header menuHandler={this.menuHandler} />
+                <Content currentPage={this.state.currentPage} />
+                <Footer menuHandler={this.menuHandler} />
             </>
         )
     }
