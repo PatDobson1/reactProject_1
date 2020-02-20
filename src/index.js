@@ -2,6 +2,7 @@
     import React from 'react';
     import ReactDom from 'react-dom';
     import styles from './style/style';
+    let data = require('./data/codeData.json');
     const appRoot = document.getElementById('app');
 // -----------------------------------------------------------------------------
 
@@ -25,7 +26,7 @@ class App extends React.Component{
         return(
             <>
                 <Header menuHandler={this.menuHandler} />
-                <Content currentPage={this.state.currentPage} />
+                <Content currentPage={this.state.currentPage} menuHandler={this.menuHandler} data={data} />
                 <Footer menuHandler={this.menuHandler} />
             </>
         )

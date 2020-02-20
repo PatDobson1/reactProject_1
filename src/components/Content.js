@@ -14,19 +14,22 @@
 class Content extends React.Component{
     constructor(props){
         super(props);
+        this.menuHandler = this.menuHandler.bind(this);
+    }
+    menuHandler(target){
+        this.props.menuHandler(target);
     }
     render(){
-        console.log(this.props.currentPage);
         let page = '';
         switch(this.props.currentPage){
             case 'home' :
-                page = <Page_home />
+                page = <Page_home menuHandler={this.menuHandler} />
             break;
             case 'about' :
                 page = <Page_about />
             break;
             case 'samples' :
-                page = <Page_samples />
+                page = <Page_samples data={this.props.data} />
             break;
             case 'contribute' :
                 page = <Page_contribute />

@@ -9,7 +9,7 @@ class Logo extends React.Component{
     }
     render(){
         return(
-            <div className={'logo ' + this.props.position}><span>Coding sample</span></div>
+            <a className={'logo ' + this.props.position}><span>Coding sample</span></a>
         )
     }
 }

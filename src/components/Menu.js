@@ -13,7 +13,7 @@ class Menu extends React.Component{
     }
     render(){
         return(
-            <div className="menu">
+            <div id="menu">
                 <MenuItem menuHandler={this.menuHandler} target="home" />
                 <MenuItem menuHandler={this.menuHandler} target="about" />
                 <MenuItem menuHandler={this.menuHandler} target="samples" />
@@ -32,6 +32,9 @@ class MenuItem extends React.Component{
     menuHandler(e){
         e.preventDefault();
         this.props.menuHandler(e.target.target);
+        if( window.innerWidth <= 768 ){
+            document.getElementById('menu').style.display = 'none';
+        }
     }
     render(){
         return(

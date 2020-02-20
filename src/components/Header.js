@@ -16,11 +16,16 @@ class Header extends React.Component{
     menuHandler(target){
         this.props.menuHandler(target);
     }
+    mobileMenuHandler(){
+        console.log("mobileMenuHandler");
+        document.getElementById('menu').style.display = 'block';
+    }
     render(){
         return(
             <div className="header">
                 <Logo position="headerLogo" />
                 <Menu menuHandler={this.menuHandler} />
+                <span id="mobileMenu" onClick={this.mobileMenuHandler}></span>
             </div>
         )
     }

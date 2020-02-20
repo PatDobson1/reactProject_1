@@ -1,0 +1,110 @@
+
+@media(max-width:900px){
+    #menu{
+        top: 25px;
+        a{
+            margin: 0 0 0 10px;
+            font-size: 1em;
+        }
+    }
+}
+
+@media(max-width:800px){
+    .content{
+        .pageContent{
+            form{
+                width: 270px;
+                label{
+                    display: block;
+                }
+                p{
+                    padding: 0;
+                    &.required{
+                        margin: 10px 0;
+                    }
+                }
+                #emailErrorNote{
+                    margin: 10px 0;
+                }
+                input[type=submit]{
+                    margin: 10px 0;
+                }
+                input, textarea{
+                    width: 250px;
+                    max-width: 250px;
+                    min-width: 250px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:768px){
+    .header #menu{
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: white;
+        z-index: 101;
+        a{
+            display: block;
+            text-align: center;
+            margin: 35px 0;
+            font-size: 1.4em;
+            font-weight: 400;
+        }
+    }
+    #mobileMenu{
+        display: block;
+    }
+    .content{
+        .heroBanner{
+            height: 50vh;
+        }
+        .pageContent{
+            h1.big{
+                font-size: 2em;
+                padding: 0 20px;
+            }
+            p{
+                padding: 0 20px;
+                overflow-wrap: break-word;
+            }
+        }
+    }
+    .footer{
+        padding: 0 20px;
+        #menu{
+            a{
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    }
+}
+
+@media(max-width:600px){
+    .content{
+        .heroBanner{
+            h1{
+                left: 20px;
+                top: 170px;
+                font-size: 2.5em;
+            }
+        }
+    }
+}
+
+@media(max-width:450px){
+    .logo.headerLogo{
+        width: 50px;
+        height: 50px;
+        background-size: 50px;
+        span{
+            font-size: 1em;
+            top: 3px;
+        }
+    }
+}

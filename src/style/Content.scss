@@ -1,17 +1,32 @@
 .content{
     margin: 60px 0 0 0;
     .heroBanner{
-        background-image: url('/background_home.png');
         background-size: cover;
+        background-position: 50%;
         height: 100vh;
         h1{
-            padding: 200px 0 0 100px;
+            position: absolute;
+            top: 260px;
+            left: 100px;
             font-size: 4em;
             font-family: 'Overpass', sans-serif;
             color: $title_colour;
         }
     }
+    .smallHero{
+        background-image: url('/aboutHero.png');
+        background-size: cover;
+        height: 50vh;
+    }
     .pageContent{
+        max-width: 1200px;
+        margin: 0 auto;
+        p{
+            font-size: 1.1em;
+            line-height: 1.2em;
+            margin: 0 0 10px 0;
+            padding: 0 20px;
+        }
         h1{
             margin: 40px 0;
             &.big{
@@ -22,17 +37,17 @@
             }
         }
         .pageBoxes{
-            width: 1200px;
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            div{
+            justify-content: center;
+            a{
                 position: relative;
-                flex-basis: calc( 33% - 40px );
+                flex-basis: 380px;
                 height: 400px;
                 background-color: $pageBox_colour;
-                margin: 20px;
+                margin: 10px;
                 padding: 20px;
                 background-repeat: no-repeat;
                 background-size: 50%;
@@ -56,7 +71,6 @@
                 }
                 &:hover{
                     background-color: darken($pageBox_colour, 10%);
-                    margin: 0 20px 20px 20px;
                 }
                 &.view{
                     background-image: url('/view.png');
@@ -66,6 +80,49 @@
                 }
                 &.download{
                     background-image: url('/download.png');
+                }
+            }
+        }
+    }
+    .codeBlockHolder{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        div{
+            border: 1px solid lighten($title_colour, 50%);
+            flex-basis: 280px;
+            max-width: 280px;
+            padding: 10px;
+            margin: 10px;
+            h3{
+                font-size: 1.2em;
+                margin: 5px 0 10px 0;
+                + p{
+                    height: 120px;
+                }
+            }
+            p.sample{
+                word-wrap: break-word;
+                height: 150px;
+                overflow-x: auto;
+                padding: 10px;
+                border: 1px solid lighten($title_colour, 50%);
+                + p{
+                    text-align: center;
+                    a{
+                        border: 1px solid lighten($title_colour, 50%);
+                        padding: 5px 20px;
+                        font-size: 1.1em;
+                        margin: 10px 0 0 0;
+                        display: inline-block;
+                        cursor: pointer;
+                        transition: all 0.1s ease-in-out;
+                        &:hover{
+                            background-color: lighten($title_colour, 50%);
+                            color: $white;
+                        }
+                    }
                 }
             }
         }
